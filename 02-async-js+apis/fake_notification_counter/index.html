@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notification Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <h1>My Dashboard</h1>
+
+        <div class="notification-badge" aria-live="polite">
+          <span class="badge-icon">🔔</span>
+          <span id="notificationCount">3</span>
+        </div>
+      </header>
+
+      <main class="dashboard">
+        <section class="welcome-card">
+          <p class="welcome-text">Welcome back, Vaibhav 👋</p>
+        </section>
+
+        <section class="panel">
+          <div class="panel-header">
+            <h2>Notifications</h2>
+            <div class="button-group">
+              <button id="refreshBtn" class="primary-btn">🔄 Refresh Notifications</button>
+              <button id="simulateBtn" class="secondary-btn">➕ Simulate Notification</button>
+            </div>
+          </div>
+
+          <div id="notificationList" class="notification-list" aria-live="polite"></div>
+        </section>
+
+        <section class="teaching-panel">
+          <h3>What's happening?</h3>
+          <div class="flow-list">
+            <div class="flow-step">1. User clicks Refresh</div>
+            <div class="flow-arrow">↓</div>
+            <div class="flow-step">2. JavaScript calls fetch()</div>
+            <div class="flow-arrow">↓</div>
+            <div class="flow-step">3. Server sends response</div>
+            <div class="flow-arrow">↓</div>
+            <div class="flow-step">4. await waits for the Promise</div>
+            <div class="flow-arrow">↓</div>
+            <div class="flow-step">5. response.json() gives us data</div>
+            <div class="flow-arrow">↓</div>
+            <div class="flow-step">6. filter() selects notifications</div>
+            <div class="flow-arrow">↓</div>
+            <div class="flow-step">7. JavaScript updates the page</div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
