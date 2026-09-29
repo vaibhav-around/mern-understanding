@@ -15,11 +15,11 @@
 
 
 // example 2 
-// console.log("Start");
+console.log("Start");
 
-// for (let i = 0; i < 1000000000; i++) {}
+for (let i = 0; i < 1000000000; i++) {}
 
-// console.log("End");
+console.log("End");
 
 
 
@@ -71,15 +71,13 @@
 
 // promise example 2
 
-// console.log("data received 1");
+// console.log(" 1");
 
 // const promise = new Promise((resolve, reject) => {
 //     setTimeout(()=> {
-//         resolve("Data received 2");
+//         reject("2");
 //     }, 2000)
 // });
-
-
 
 // promise
 //     .then(data => {
@@ -93,7 +91,7 @@
 //     });
 
 
-// console.log("Data received 3");
+// console.log(" 3");
 
 
 
@@ -160,15 +158,15 @@
 
 // fetch example 1
 
-// async function fetchData() {
-//     try{
-//         const response = await fetch("https://jsonplaceholder.typicode.com/todos");
-//         const data = await response.json();
-//         console.log(data);
-//     }catch(err){
-//         console.log(`Some errror happened: ${err}`);
-//     }
-// }
+async function fetchData() {
+    try{
+        const response = await fetch("https://jsonplaceholder.typicode.com/todos");
+        const data = await response.json();
+        console.log(data);
+    }catch(err){
+        console.log(`Some errror happened: ${err}`);
+    }
+}
 
 // fetchData();
 
@@ -184,7 +182,10 @@
 
 
 // const completedTodos = todos.filter(
-//     todo => todo.completed
+//     (todo) => {
+//          if(todo.completed == true){
+//             return todo
+//          }}
 // );
 
 // console.log(completedTodos);
@@ -201,6 +202,8 @@
 // ]
 
 
-// const modified_todos = todos.map(e => e.title)
+// const modified_todos = todos.map((e) => {
+//     return e.title
+// })
 
 // console.log(modified_todos);
